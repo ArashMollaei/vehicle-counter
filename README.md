@@ -1,12 +1,105 @@
-# 🚗 Vehicle Counter with YOLO11 & Streamlit
+```
+# 🚗 شمارشگر هوشمند خودروها (Vehicle Counter)
 
-Smart vehicle counter using YOLO11, ByteTrack tracking and Streamlit UI.
+این یک پروژه‌ی عملی و حرفه‌ای برای شمارش خودروها در ویدیوهای ترافیکی است که با استفاده از **YOLO11**، **ByteTrack** و **Streamlit** ساخته شده. کاربر ویدیو را آپلود می‌کنه و سیستم به‌صورت خودکار خودروها، موتورسیکلت‌ها، اتوبوس‌ها و کامیون‌ها رو شناسایی، ردیابی و شمارش می‌کنه. خروجی شامل ویدیوی پردازش‌شده با باکس‌های ردیابی، خط شمارش و نمودار آماری از تعداد عبور هر نوع وسیله است.
 
-## ✨ Features
-- Detect and track four classes: car, motorcycle, bus, truck
-- Count unique crossings of a virtual lane (no duplicate counting)
-- Simple UI for uploading video and receiving output
-- Ability to adjust the position of the counting line and select the YOLO model
-- Video output with tracking boxes and counting line
-- Interactive bar graph of results
+---
 
+## 🎥 دمو (Demo)
+
+![دموی اجرای برنامه](demo.gif)
+
+> *ویدیوی اصلی و خروجی پردازش‌شده با خط شمارش و جعبه‌های تشخیص*
+
+---
+
+## ✨ قابلیت‌ها (Features)
+
+- 🚗 تشخیص و ردیابی ۴ کلاس: خودرو، موتورسیکلت، اتوبوس و کامیون  
+- 📊 شمارش یکتا (بدون شمارش تکراری) با عبور از یک خط مجازی  
+- 🎛️ تنظیم موقعیت خط شمارش و انتخاب مدل YOLO (نانو، کوچک، متوسط)  
+- 📥 خروجی ویدیو با باکس‌های ردیابی و خط شمارش  
+- 📈 نمایش نمودار میله‌ای نتایج شمارش با Plotly  
+
+---
+
+## 🛠️ تکنولوژی‌ها (Built With)
+
+- [Ultralytics YOLO11](https://github.com/ultralytics/ultralytics) - تشخیص و ردیابی اشیا  
+- [Streamlit](https://streamlit.io/) - رابط کاربری تحت وب  
+- [OpenCV](https://opencv.org/) - پردازش ویدیو  
+- [Plotly](https://plotly.com/) - رسم نمودارهای تعاملی  
+- [Pandas](https://pandas.pydata.org/) - مدیریت داده‌ها  
+
+---
+
+## 📦 نصب و راه‌اندازی (Installation)
+
+1. مخزن را کلون کنید:
+```bash
+git clone https://github.com/ArashMollaei/vehicle-counter.git
+cd vehicle-counter
+```
+
+2. یک محیط مجازی پایتون بسازید:
+```bash
+python -m venv venv
+source venv/bin/activate  # در ویندوز: venv\Scripts\activate
+```
+
+3. وابستگی‌ها را نصب کنید:
+```bash
+pip install -r requirements.txt
+```
+
+4. برنامه را اجرا کنید:
+```bash
+streamlit run app.py
+```
+
+> توجه: برنامه در اولین اجرا، مدل‌های YOLO را به‌صورت خودکار دانلود می‌کند.
+
+---
+
+## 🚀 نحوه استفاده (Usage)
+
+1. فایل ویدیویی (MP4، AVI، MOV، MKV) را آپلود کنید.  
+2. در نوار کناری، موقعیت خط شمارش و مدل مورد نظر را تنظیم کنید.  
+3. روی دکمه **Start processing** کلیک کنید.  
+4. منتظر بمانید تا پردازش کامل شود.  
+5. ویدیوی پردازش‌شده را دانلود کنید و نمودار آماری را مشاهده کنید.  
+
+---
+
+## 📁 ساختار پروژه (Project Structure)
+
+```text
+vehicle-counter/
+├── app.py               # رابط کاربری Streamlit
+├── tracker.py           # منطق ردیابی و شمارش با YOLO
+├── config.py            # تنظیمات ثابت (کلاس‌ها، مدل، ...)
+├── requirements.txt     # لیست کتابخانه‌های مورد نیاز
+├── demo.gif             # دموی متحرک برنامه
+├── .gitignore           # فایل‌های نادیده‌گرفته شده در گیت
+└── README.md            # همین فایل
+```
+
+---
+
+## 👤 نویسنده (Author)
+
+**Arash Mollaei**  
+- [GitHub](https://github.com/ArashMollaei)
+
+---
+
+## 📄 مجوز (License)
+
+این پروژه صرفاً برای اهداف آموزشی توسعه داده شده است. استفادهٔ تجاری آزاد است، اما ذکر منبع الزامی می‌باشد.
+
+---
+
+## 🙌 چرا این پروژه؟
+
+این اولین پروژه‌ی جدی من در حوزه‌ی بینایی ماشین و ساخت اپلیکیشن‌های تحت‌وب با Streamlit است. هدفم این بود که یک ابزار کاربردی و نمایشی بسازم که هم مهارت‌های فنی‌ام رو نشون بده و هم بتونه توی رزومه‌ام بدرخشد.
+```
