@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.mp4
+*.avi
+*.mov
+venv/
+.vscode/
+processed_output.mp4
+yolo11s.pt
+yolo11n.pt
+yolo11m.pt
+temp/
